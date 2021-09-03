@@ -54,31 +54,31 @@ void initial_frame(uint16_t *pixels)
         {
             for (int32_t x = 0; x < WIDTH; ++x)
             {
-                if (x > white_start && x < white_end)
+                if (x >= white_start && x < white_end)
                 {
                     Y = 235; U = 128; V = 128;
                 }
-                if (x > yellow_start && x < yellow_end)
+                if (x >= yellow_start && x < yellow_end)
                 {
                     Y = 168; U = 44; V = 136;
                 }
-                if (x > cyan_start && x < cyan_end)
+                if (x >= cyan_start && x < cyan_end)
                 {
                     Y = 145; U = 147; V = 44;
                 }
-                if (x > green_start && x < green_end)
+                if (x >= green_start && x < green_end)
                 {
                     Y = 134; U = 63; V = 52;
                 }
-                if (x > magenta_start && x < magenta_end)
+                if (x >= magenta_start && x < magenta_end)
                 {
                     Y = 63; U = 193; V = 204;
                 }
-                if (x > red_start && x < red_end)
+                if (x >= red_start && x < red_end)
                 {
                     Y = 51; U = 109; V = 212;
                 }
-                if (x > blue_start && x < WIDTH)
+                if (x >= blue_start && x < WIDTH)
                 {
                     Y = 28; U = 212; V = 120;
                 }

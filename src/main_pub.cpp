@@ -60,7 +60,7 @@ void initial_frame(uint16_t *pixels)
                 }
                 if (x >= yellow_start && x < yellow_end)
                 {
-                    Y = 168; U = 44; V = 136;
+                    Y = 235; U = 34; V = 116;
                 }
                 if (x >= cyan_start && x < cyan_end)
                 {

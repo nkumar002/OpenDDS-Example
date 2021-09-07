@@ -43,12 +43,14 @@ endforeach()
 ######## Application PUB ###########
 add_executable(${PUB_EXEC} main_pub.cpp)
 
+set_target_properties(${PUB_EXEC} PROPERTIES OUTPUT_NAME publisher)
+
 #Include headers
 target_include_directories(${PUB_EXEC}
                            PUBLIC
                            $<BUILD_INTERFACE:${CMAKE_CURRENT_SOURCE_DIR}/include>)
 
-OPENDDS_TARGET_SOURCES(${PUB_EXEC} ${DST}/Image.idl ${DST}/Common.idl ${DST}/main_pub.cpp)
+OPENDDS_TARGET_SOURCES(${PUB_EXEC} ${DST}/Image.idl ${DST}/Common.idl)
 
 target_link_libraries(${PUB_EXEC}
                       ${opendds_libs}
@@ -58,12 +60,14 @@ target_link_libraries(${PUB_EXEC}
 ######## Application SUB ###########
 add_executable(${SUB_EXEC} main_sub.cpp)
 
+set_target_properties(${SUB_EXEC} PROPERTIES OUTPUT_NAME subscriber)
+
 #Include headers
 target_include_directories(${SUB_EXEC}
                            PUBLIC
                            $<BUILD_INTERFACE:${CMAKE_CURRENT_SOURCE_DIR}/include>)
 
-OPENDDS_TARGET_SOURCES(${SUB_EXEC} ${DST}/Image.idl ${DST}/Common.idl ${DST}/main_sub.cpp)
+OPENDDS_TARGET_SOURCES(${SUB_EXEC} ${DST}/Image.idl ${DST}/Common.idl)
 
 target_link_libraries(${SUB_EXEC} 
                       ${OpenCV_LIBRARIES}

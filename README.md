@@ -31,9 +31,9 @@ $ DCPSInfoRepo -ORBListenEndpoints iiop://127.0.0.1:12345
 
 Publish (Terminal 2):
 ```sh
-$ ./build/my_example_pub -DCPSConfigFile my_example_conf.ini
+$ ./build/publisher -DCPSConfigFile my_example_conf.ini
 ```
 Subscriber (Terminal 3):
 ```sh
-$ ./build/my_example_sub -DCPSConfigFile my_example_conf.ini
+$ ./build/subscriber -DCPSConfigFile my_example_conf.ini
 ```
